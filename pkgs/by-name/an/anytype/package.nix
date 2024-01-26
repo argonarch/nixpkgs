@@ -2,13 +2,13 @@
 
 let
   pname = "anytype";
-  version = "0.37.3";
+  version = "0.37.18-beta";
   name = "Anytype-${version}";
   nameExecutable = pname;
   src = fetchurl {
     url = "https://github.com/anyproto/anytype-ts/releases/download/v${version}/${name}.AppImage";
     name = "Anytype-${version}.AppImage";
-    sha256 = "sha256-W3p67L07XOEtXYluI+TvggXBdaNRadypZc9MO6QTh4M=";
+    sha256 = "0v2vdipadz6j6l29xpk69xrzrkdq6zxskri59mxkdhkh3cl5bwar";
   };
   appimageContents = appimageTools.extractType2 { inherit name src; };
 in
